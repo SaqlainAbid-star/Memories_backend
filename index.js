@@ -41,13 +41,17 @@ app.use('/posts',postRoutes);
 // const Connection_URL = 'mongodb://127.0.0.1:27017/memoriesProject';
 const Connection_URL = 'mongodb+srv://Saqlain:Saqlain123@cluster0.oo31c.mongodb.net/?retryWrites=true&w=majority';
 
-const PORT = process.env.PORT || 5000;
+const PORT =  5000;
 
 // mongoose to connect to our database
 mongoose.connect(Connection_URL,{useNewUrlParser: true, useUnifiedTopology: true })
-.then(()=> app.listen(PORT,()=> console.log(`Server running on port : ${PORT}`)) )
-.catch((error)=>console.log("Error is this",error.message));
+.then(()=> console.log("DB Connected."))
+.catch((error)=>console.log("Error: ",error.message));
 // mongoose.set('useFindAndModify', false);
 
 
 // we are connected to the database we can start creating routes for our backend application
+
+app.listen(PORT, () => {
+    console.log("Your server is running on 5000");
+  });
