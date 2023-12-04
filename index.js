@@ -26,8 +26,8 @@ app.use(
 // use all different methods on that app instance
 // sending some images large in size
 // setting up the body parser to properly send our requests
-app.use(bodyParser.json({limit: '30mb',extended: true}));
-app.use(bodyParser.urlencoded({limit: '30mb',extended: true}));
+// app.use(bodyParser.json({limit: '30mb',extended: true}));
+// app.use(bodyParser.urlencoded({limit: '30mb',extended: true}));
 
 // we can use express middleware to connect routes to our application
 // First parameter: set up the starting path for all the routes
