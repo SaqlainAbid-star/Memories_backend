@@ -36,6 +36,11 @@ app.use(
 // it's reached by going to localhost:5000/posts because we added a prefix of posts to all routes
 app.use('/posts',postRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Sever is Running");
+  });
+  
+
 // connect our server application with a real database mongodb 
 // host our database on their cloud 
 // const Connection_URL = 'mongodb://127.0.0.1:27017/memoriesProject';
